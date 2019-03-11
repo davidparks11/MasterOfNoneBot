@@ -22,7 +22,7 @@ class GrabMeme extends commando.Command {
                 body.data.children.filter(post => !post.data.over_18)
             if (!allowed.length) return message.reply('Sadly the memes aren\'t '
                 + 'dank enough right now. Try again later!')
-            const rand_num = Math.floor(Math.random * allowed.length)
+            const rand_num = Math.floor(Math.random() * allowed.length)
             const embeded = new discord.RichEmbed()
                 .setColor(0x00A2E8)
                 .setTitle(allowed[rand_num].data.title)
@@ -31,7 +31,6 @@ class GrabMeme extends commando.Command {
                 .addField("Other info:", "Up votes: " + allowed[rand_num].data.ups
                      + " / Comments: " + allowed[rand_num].data.num_comments)
                 .setFooter("Memes provided by r/dankmemes")
-                console.log('WORKING')
             message.channel.send(embeded)
         } catch (err) {
             return console.log(err)
