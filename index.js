@@ -1,7 +1,8 @@
 const Discord = require('discord.js')
 const commando = require('discord.js-commando')
+const config = require('./config.js')
 const bot = new commando.CommandoClient()
-const TOKEN = 'NTUzNjEzODA3MDg4MzA0MTU5.D2QpCQ.0xHg9PsLRFX4dTQ4YqvtjB4RVMA'
+const TOKEN = config.TOKEN
 
 bot.registry.registerGroup('random', 'Random')
 bot.registry.registerGroup('misc', 'Misc')

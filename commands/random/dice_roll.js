@@ -7,11 +7,18 @@ class DiceRollCommand extends commando.Command {
             group: 'random',
             memberName: 'roll',
             description: 'Rolls a die'
+            
         })
 
     }
 
     async run(message, args) {
+      /*  if (args.isEmpty())
+        {
+            var sides = 6
+        } else {
+            args.
+        }*/
         var roll = Math.floor(Math.random()*6) + 1
         message.reply('You rolled a ' + roll + '!')
     }
