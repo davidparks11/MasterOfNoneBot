@@ -6,7 +6,7 @@ class GrabMeme extends commando.Command {
     constructor(client) {
         super(client, {
             name:'meme',
-            group: 'misc',
+            group: 'entertainment',
             memberName: 'meme',
             description: 'Pulls a new or not new dank meme '
             + 'from r/dankmemes'
